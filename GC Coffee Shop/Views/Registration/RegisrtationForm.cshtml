@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewData["Title"] = "RegisrtationForm";
+}
+
+@model RegisterUser
+
+<h1>RegisrtationForm</h1>
+
+@Html.ValidationSummary()
+
+<form action="../Registration/RegistrationResult" method="post">
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FirstName)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.FirstName)
+        @Html.ValidationMessageFor(model => model.FirstName)
+    </div><br />
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.LastName)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.LastName)
+        @Html.ValidationMessageFor(model => model.LastName)
+    </div><br />
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.DOB)
+    </div>
+    <input type="date" name="DOB" value="@Model.DOB" /><br /><br />
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Address)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Address)
+        @Html.ValidationMessageFor(model => model.Address)
+    </div><br />
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.City)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.City)
+        @Html.ValidationMessageFor(model => model.City)
+    </div><br />
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.State)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.State)
+        @Html.ValidationMessageFor(model => model.State)
+    </div><br />
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ZipCode)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ZipCode)
+        @Html.ValidationMessageFor(model => model.ZipCode)
+    </div><br />
+             
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Email)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </div><br />
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Password)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+    </div><br />
+
+    <input type="submit" value="Submit Registration" />
+</form>
+

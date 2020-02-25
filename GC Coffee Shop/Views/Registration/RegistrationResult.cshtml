@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "RegistrationResult";
+}
+@model RegisterUser
+
+<h4>Hello @Model.FirstName, You are Successfully Registered!</h4>
+
+<h6>Your Registration Details:</h6><br/>
+<p>@Model.FirstName @Model.LastName</p><br/>
+<p>@Model.Address</p>
+<p>@Model.City  @Model.State</p>
+<p>@Model.ZipCode</p><br/>
+<p>@Model.Email</p><br/>
+<p>@Model.Password</p>
+
+
